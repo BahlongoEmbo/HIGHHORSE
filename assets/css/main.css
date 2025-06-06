@@ -1,28 +1,20 @@
-/**
-* Template Name: Arsha
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Updated: Feb 22 2025 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Jost",  sans-serif;
+  --default-font: "Raleway",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Arial",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #e9eaec; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #37517e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #47b2e4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #471c13; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #99a9b8; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,25 +22,25 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #47b2e4; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #99a9b8; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #47b2e4; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #99a9b8; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f5f6f8;
+  --background-color: #ffffff;
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #37517e;
+  --background-color: #0f1d38;
   --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #4668a2;
+  --heading-color: #fcc38e;
+  --surface-color: #ffffff;
   --contrast-color: #ffffff;
 }
 
@@ -945,299 +937,415 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Clients Section
+# Services 2 Section
 --------------------------------------------------------------*/
-.clients {
-  padding: 12px 0;
+.services-2 {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.clients .swiper {
-  padding: 10px 0;
-}
-
-.clients .swiper-wrapper {
-  height: auto;
-}
-
-.clients .swiper-slide img {
+.services-2 .service-item {
+  height: 100%;
+  background-color: var(--surface-color);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
-  padding: 0 10px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.clients .swiper-slide img:hover {
+.services-2 .service-item .img {
+  overflow: hidden;
+}
+
+.services-2 .service-item .img img {
+  transition: 0.6s;
+}
+
+.services-2 .service-item .details {
+  padding: 25px;
+}
+
+.services-2 .service-item .details .icon {
+  margin: 0 auto 20px auto;
+  width: 64px;
+  height: 64px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.services-2 .service-item .details .icon i {
+  color: var(--contrast-color);
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.services-2 .service-item .details h3 {
+  color: var(--heading-color);
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  font-size: 22px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.services-2 .service-item .details p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  text-align: center;
+}
+
+.services-2 .service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.services-2 .service-item:hover .img img {
   transform: scale(1.1);
 }
 
+.services-2 .service-item:hover .details h3 {
+  color: var(--accent-color);
+}
+
+.services-2 .service-item:hover .details .icon {
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+.services-2 .service-item:hover .details .icon i {
+  color: var(--accent-color);
+}
+
 /*--------------------------------------------------------------
-# About Section
+# Hero 2 Section
 --------------------------------------------------------------*/
-.about ul {
+.hero-2 {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.hero-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);
+  z-index: 1;
+}
+
+.hero-2 .container,
+.hero-2 .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-2 .content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 3rem;
+}
+
+@media (max-width: 991px) {
+  .hero-2 .content-col {
+    padding-right: 15px;
+    margin-bottom: 3rem;
+  }
+}
+
+.hero-2 .agency-name {
+  margin-bottom: 1.5rem;
+}
+
+.hero-2 .agency-name h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--contrast-color);
+  margin: 0;
+}
+
+.hero-2 .main-heading {
+  margin-bottom: 2rem;
+}
+
+.hero-2 .main-heading h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .hero-2 .main-heading h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-2 .main-heading h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-2 .main-heading h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.hero-2 .divider {
+  width: 60%;
+  height: 1px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+  .hero-2 .divider {
+    width: 100%;
+  }
+}
+
+.hero-2 .description {
+  margin-bottom: 2.5rem;
+}
+
+.hero-2 .description p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0;
+}
+
+.hero-2 .cta-button .btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 40%);
+  color: var(--default-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.hero-2 .cta-button .btn span {
+  margin-right: 0.5rem;
+}
+
+.hero-2 .cta-button .btn i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.hero-2 .cta-button .btn:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.hero-2 .cta-button .btn:hover i {
+  transform: translateX(5px);
+}
+
+.hero-2 .visual-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .hero-2 .visual-content {
+    flex-direction: column;
+  }
+}
+
+.hero-2 .fluid-shape {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-2 .fluid-shape .fluid-img {
+  width: 100%;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero-2 .stats-card {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  background-color: color-mix(in srgb, var(--surface-color), transparent 50%);
+  backdrop-filter: blur(10px);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+  .hero-2 .stats-card {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 2rem;
+    width: 90%;
+  }
+}
+
+.hero-2 .stats-card .stats-number h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+.hero-2 .stats-card .stats-label {
+  margin-top: 0.5rem;
+}
+
+.hero-2 .stats-card .stats-label p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.hero-2 .stats-card .stats-arrow {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.hero-2 .stats-card .stats-arrow a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  color: var(--contrast-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero-2 .stats-card .stats-arrow a:hover {
+  transform: translateY(-3px);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/*--------------------------------------------------------------
+# About 3 Section
+--------------------------------------------------------------*/
+.about-3 .content .who-we-are {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.about-3 .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about-3 .content ul {
   list-style: none;
   padding: 0;
 }
 
-.about ul li {
-  padding-bottom: 5px;
-  display: flex;
-  align-items: center;
+.about-3 .content ul li {
+  padding-bottom: 10px;
 }
 
-.about ul i {
-  font-size: 20px;
-  padding-right: 4px;
+.about-3 .content ul i {
+  font-size: 1.25rem;
+  margin-right: 4px;
   color: var(--accent-color);
 }
 
-.about .read-more {
-  color: var(--accent-color);
+.about-3 .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-3 .content .read-more {
+  background: var(--accent-color);
+  color: var(--contrast-color);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
-  padding: 8px 28px;
+  padding: 12px 24px;
   border-radius: 5px;
   transition: 0.3s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--accent-color);
 }
 
-.about .read-more i {
+.about-3 .content .read-more i {
   font-size: 18px;
   margin-left: 5px;
   line-height: 0;
   transition: 0.3s;
 }
 
-.about .read-more:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+.about-3 .content .read-more:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  padding-right: 19px;
 }
 
-.about .read-more:hover i {
-  transform: translate(5px, 0);
+.about-3 .content .read-more:hover i {
+  margin-left: 10px;
 }
 
-/*--------------------------------------------------------------
-# Why Us Section
---------------------------------------------------------------*/
-.why-us {
-  padding: 30px 0;
-}
-
-.why-us .content h3 {
-  font-weight: 400;
-  font-size: 34px;
-}
-
-.why-us .content p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.why-us .faq-container .faq-item {
-  background-color: var(--surface-color);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.why-us .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.why-us .faq-container .faq-item h3 {
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.why-us .faq-container .faq-item h3 span {
-  color: var(--accent-color);
-  padding-right: 5px;
-  font-weight: 600;
-}
-
-.why-us .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
-}
-
-.why-us .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.why-us .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.why-us .faq-container .faq-item .faq-icon {
-  position: absolute;
-  top: 22px;
-  left: 20px;
-  font-size: 22px;
-  line-height: 0;
-  transition: 0.3s;
-  color: var(--accent-color);
-}
-
-.why-us .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.why-us .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
-}
-
-.why-us .faq-container .faq-active h3 {
-  color: var(--accent-color);
-}
-
-.why-us .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.why-us .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: var(--accent-color);
-}
-
-.why-us .why-us-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.why-us .why-us-img img {
-  max-height: 70%;
-}
-
-/*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
-.skills .content h3 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.skills .content p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.skills .content p:last-child {
-  margin-bottom: 0;
-}
-
-.skills .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skills .content ul li {
-  padding-bottom: 10px;
-}
-
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  color: var(--default-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--heading-color), transparent 90%);
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--heading-color);
-}
-
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
-.services .service-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
-  transition: all ease-in-out 0.4s;
-  height: 100%;
-}
-
-.services .service-item .icon {
-  margin-bottom: 10px;
-}
-
-.services .service-item .icon i {
-  color: var(--accent-color);
-  font-size: 36px;
-  transition: 0.3s;
-}
-
-.services .service-item h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.services .service-item h4 a {
-  color: var(--heading-color);
-  transition: ease-in-out 0.3s;
-}
-
-.services .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .service-item:hover {
-  transform: translateY(-10px);
-}
-
-.services .service-item:hover h4 a {
-  color: var(--accent-color);
+.about-3 .about-images img {
+  border-radius: 10px;
 }
 
 /*--------------------------------------------------------------
 # Work Process Section
 --------------------------------------------------------------*/
+.work-process {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .work-process .steps-item {
   background: var(--surface-color);
   border-radius: 20px;
@@ -1543,135 +1651,9 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Team Section
+# Pricing 2 Section
 --------------------------------------------------------------*/
-.team .team-member {
-  background-color: var(--surface-color);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
-  border-radius: 5px;
-  transition: 0.5s;
-  padding: 30px;
-  height: 100%;
-}
-
-@media (max-width: 468px) {
-  .team .team-member {
-    flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-}
-
-.team .team-member .pic {
-  overflow: hidden;
-  width: 150px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.team .team-member .pic img {
-  transition: ease-in-out 0.3s;
-}
-
-.team .team-member:hover {
-  transform: translateY(-10px);
-}
-
-.team .team-member .member-info {
-  padding-left: 30px;
-}
-
-@media (max-width: 468px) {
-  .team .team-member .member-info {
-    padding: 30px 0 0 0;
-    text-align: center;
-  }
-}
-
-.team .team-member h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
-}
-
-.team .team-member span {
-  display: block;
-  font-size: 15px;
-  padding-bottom: 10px;
-  position: relative;
-  font-weight: 500;
-}
-
-.team .team-member span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: color-mix(in srgb, var(--default-color), transparent 85%);
-  bottom: 0;
-  left: 0;
-}
-
-@media (max-width: 468px) {
-  .team .team-member span::after {
-    left: calc(50% - 25px);
-  }
-}
-
-.team .team-member p {
-  margin: 10px 0 0 0;
-  font-size: 14px;
-}
-
-.team .team-member .social {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-}
-
-@media (max-width: 468px) {
-  .team .team-member .social {
-    justify-content: center;
-  }
-}
-
-.team .team-member .social a {
-  background: color-mix(in srgb, var(--default-color), transparent 94%);
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  width: 36px;
-  height: 36px;
-}
-
-.team .team-member .social a i {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 16px;
-  margin: 0 2px;
-}
-
-.team .team-member .social a:hover {
-  background: var(--accent-color);
-}
-
-.team .team-member .social a:hover i {
-  color: var(--contrast-color);
-}
-
-.team .team-member .social a+a {
-  margin-left: 8px;
-}
-
-/*--------------------------------------------------------------
-# Pricing Section
---------------------------------------------------------------*/
-.pricing .pricing-item {
+.pricing-2 .pricing-item {
   background-color: var(--surface-color);
   box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
   border-top: 4px solid var(--background-color);
@@ -1680,13 +1662,13 @@ section,
   border-radius: 5px;
 }
 
-.pricing h3 {
+.pricing-2 h3 {
   font-weight: 600;
   margin-bottom: 15px;
   font-size: 20px;
 }
 
-.pricing h4 {
+.pricing-2 h4 {
   color: var(--accent-color);
   font-size: 48px;
   font-weight: 400;
@@ -1694,16 +1676,16 @@ section,
   margin-bottom: 0;
 }
 
-.pricing h4 sup {
+.pricing-2 h4 sup {
   font-size: 28px;
 }
 
-.pricing h4 span {
+.pricing-2 h4 span {
   color: color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 18px;
 }
 
-.pricing ul {
+.pricing-2 ul {
   padding: 20px 0;
   list-style: none;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
@@ -1711,31 +1693,31 @@ section,
   line-height: 20px;
 }
 
-.pricing ul li {
+.pricing-2 ul li {
   padding: 10px 0;
   display: flex;
   align-items: center;
 }
 
-.pricing ul i {
+.pricing-2 ul i {
   color: #059652;
   font-size: 24px;
   padding-right: 3px;
 }
 
-.pricing ul .na {
+.pricing-2 ul .na {
   color: color-mix(in srgb, var(--default-color), transparent 60%);
 }
 
-.pricing ul .na i {
+.pricing-2 ul .na i {
   color: color-mix(in srgb, var(--default-color), transparent 60%);
 }
 
-.pricing ul .na span {
+.pricing-2 ul .na span {
   text-decoration: line-through;
 }
 
-.pricing .buy-btn {
+.pricing-2 .buy-btn {
   color: var(--accent-color);
   display: inline-block;
   padding: 8px 35px 10px 35px;
@@ -1748,36 +1730,36 @@ section,
   border: 1px solid var(--accent-color);
 }
 
-.pricing .buy-btn:hover {
+.pricing-2 .buy-btn:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
 }
 
-.pricing .featured {
+.pricing-2 .featured {
   border-top-color: var(--accent-color);
 }
 
-.pricing .featured .buy-btn {
+.pricing-2 .featured .buy-btn {
   background: var(--accent-color);
   color: var(--contrast-color);
 }
 
 @media (max-width: 992px) {
-  .pricing .box {
+  .pricing-2 .box {
     max-width: 60%;
     margin: 0 auto 30px auto;
   }
 }
 
 @media (max-width: 767px) {
-  .pricing .box {
+  .pricing-2 .box {
     max-width: 80%;
     margin: 0 auto 30px auto;
   }
 }
 
 @media (max-width: 420px) {
-  .pricing .box {
+  .pricing-2 .box {
     max-width: 100%;
     margin: 0 auto 30px auto;
   }
@@ -1877,250 +1859,6 @@ section,
   .testimonials .testimonial-item p {
     width: 80%;
   }
-}
-
-/*--------------------------------------------------------------
-# Faq 2 Section
---------------------------------------------------------------*/
-.faq-2 .faq-container {
-  margin-top: 15px;
-}
-
-.faq-2 .faq-container .faq-item {
-  background-color: var(--surface-color);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.faq-2 .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.faq-2 .faq-container .faq-item h3 {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  margin: 0 30px 0 32px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq-2 .faq-container .faq-item h3 span {
-  color: var(--accent-color);
-  padding-right: 5px;
-}
-
-.faq-2 .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
-}
-
-.faq-2 .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.faq-2 .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.faq-2 .faq-container .faq-item .faq-icon {
-  position: absolute;
-  top: 22px;
-  left: 20px;
-  font-size: 20px;
-  line-height: 0;
-  transition: 0.3s;
-  color: var(--accent-color);
-}
-
-.faq-2 .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq-2 .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
-}
-
-.faq-2 .faq-container .faq-active h3 {
-  color: var(--accent-color);
-}
-
-.faq-2 .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq-2 .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Subscribe Section
---------------------------------------------------------------*/
-.subscribe .container {
-  padding: 80px 80px 0 80px;
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
-  border-radius: 15px;
-}
-
-@media (max-width: 992px) {
-  .subscribe .container {
-    padding: 60px 60px 0 60px;
-  }
-}
-
-@media (max-width: 575px) {
-  .subscribe .container {
-    padding: 25px 15px 0 15px;
-    border-radius: 0;
-  }
-}
-
-.subscribe .cta-content h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.subscribe .cta-content p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-.subscribe .cta-form .form-control {
-  height: 50px;
-  border-radius: 25px 0 0 25px;
-  border: 1px solid var(--accent-color);
-  padding-left: 20px;
-}
-
-.subscribe .cta-form .form-control:focus {
-  box-shadow: none;
-  border-color: var(--accent-color);
-}
-
-.subscribe .cta-form .btn {
-  height: 50px;
-  border-radius: 0 25px 25px 0;
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 0 30px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.subscribe .cta-form .btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 10%);
-  border-color: color-mix(in srgb, var(--accent-color), black 10%);
-}
-
-@media (max-width: 575px) {
-  .subscribe .cta-form .btn {
-    padding: 0 15px;
-  }
-}
-
-@media (max-width: 991px) {
-  .subscribe .cta-content {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .subscribe .cta-image {
-    text-align: center;
-  }
-}
-
-/*--------------------------------------------------------------
-# Recent Blog Postst Section
---------------------------------------------------------------*/
-.recent-blog-postst .post-item {
-  background: var(--surface-color);
-  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-
-.recent-blog-postst .post-item .post-img img {
-  transition: 0.5s;
-}
-
-.recent-blog-postst .post-item .post-date {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  text-transform: uppercase;
-  font-size: 13px;
-  padding: 6px 12px;
-  font-weight: 500;
-}
-
-.recent-blog-postst .post-item .post-content {
-  padding: 30px;
-}
-
-.recent-blog-postst .post-item .post-title {
-  color: var(--heading-color);
-  font-size: 20px;
-  font-weight: 700;
-  transition: 0.3s;
-  margin-bottom: 15px;
-}
-
-.recent-blog-postst .post-item .meta i {
-  font-size: 16px;
-  color: var(--accent-color);
-}
-
-.recent-blog-postst .post-item .meta span {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.recent-blog-postst .post-item hr {
-  color: color-mix(in srgb, var(--default-color), transparent 80%);
-  margin: 20px 0;
-}
-
-.recent-blog-postst .post-item .readmore {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  line-height: 1;
-  transition: 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
-.recent-blog-postst .post-item .readmore i {
-  line-height: 0;
-  margin-left: 6px;
-  font-size: 16px;
-}
-
-.recent-blog-postst .post-item:hover .post-title,
-.recent-blog-postst .post-item:hover .readmore {
-  color: var(--accent-color);
-}
-
-.recent-blog-postst .post-item:hover .post-img img {
-  transform: scale(1.1);
 }
 
 /*--------------------------------------------------------------
